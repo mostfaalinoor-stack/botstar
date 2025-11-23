@@ -1,12 +1,7 @@
-name: Run Any Python Script Manually
+name: Run Python Manually
 
 on:
-  workflow_dispatch:
-    inputs:
-      script_name:
-        description: 'Enter the Python file to run (with .py)'
-        required: true
-        default: 'bot.py'
+  workflow_dispatch:   # تشغيل يدوي
 
 jobs:
   run-script:
@@ -23,15 +18,15 @@ jobs:
       with:
         python-version: '3.10'
 
-    # 3️⃣ عرض كل الملفات والمجلدات
+    # 3️⃣ عرض كل الملفات (اختياري للتأكد)
     - name: List all files
       run: ls -R
 
-    # 4️⃣ تثبيت المكتبات لو موجود requirements.txt
+    # 4️⃣ تثبيت المكتبات إذا موجودة requirements.txt
     - name: Install dependencies
       run: |
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-    # 5️⃣ تشغيل الملف الذي تم إدخاله
-    - name: Run selected Python script
-      run: python ${{ github.event.inputs.script_name }}
+    # 5️⃣ تشغيل ملف البايثون
+    - name: Run bot.py
+      run: python bot.py
