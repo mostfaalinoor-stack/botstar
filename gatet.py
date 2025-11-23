@@ -54,9 +54,10 @@ def stch(ccx):
     
     cookies = {
         '__stripe_mid': '43d49d9f-4a6b-41f0-aefb-8f91e694862860328f',
-        '__test': '27bf2c38399fa8ae8ca118c7a0cf2f35',
-        '__stripe_sid': 'e1478a26-2d10-4c26-aab8-06b2a11f583e56e1ce',
+        '__test': 'bcd924d9a84b55853dc2833f9ac5338a',
+        '__stripe_sid': '250defef-af12-46b7-9520-6cf3c4b6147337380d',
     }
+
     headers = {
             'Accept': '*/*',
             'Accept-Language': 'en-US,en;q=0.9,ar;q=0.8',
