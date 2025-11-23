@@ -133,6 +133,11 @@ def stau(ccx):
     except:
         return (response.json()["error"]["message"])
         pass
+	cookies = {
+	    '__stripe_mid': '77a1b87a-b4e9-46af-b659-85e9b249bd099a7459',
+	    '__test': 'bcd924d9a84b55853dc2833f9ac5338a',
+	    '__stripe_sid': '0e7e6b1a-cb0b-4e1a-b47a-426d2e95c528d99fd1',
+	}
 
     headers = {
         'Accept': '*/*',
