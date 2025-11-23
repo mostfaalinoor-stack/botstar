@@ -1,0 +1,6 @@
+requests
+cloudscraper
+user_agent
+pyTelegramBotAPI
+Faker
+beautifulsoup4
