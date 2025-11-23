@@ -134,12 +134,6 @@ def stau(ccx):
         return (response.json()["error"]["message"])
         pass
 
-    cookies = {
-        '__test': '27bf2c38399fa8ae8ca118c7a0cf2f35',
-        '__stripe_mid': '77a1b87a-b4e9-46af-b659-85e9b249bd099a7459',
-        '__stripe_sid': '8e5c3aa5-0db4-494f-94e3-c4d1b8a27caa3dff0b',
-    }
-
     headers = {
         'Accept': '*/*',
         'Accept-Language': 'en-US,en;q=0.9,ar;q=0.8',
