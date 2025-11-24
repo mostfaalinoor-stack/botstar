@@ -136,12 +136,12 @@ def stau(ccx):
         time.sleep(10)
         return (response.json()["error"]["message"])
         pass
-	
-	cookies = {
-    '__stripe_mid': 'f47bdda4-03bd-4f7b-83ee-13f0540db213b99b49',
-    '__test': 'a3d25e1987dc33989d1b872038a8171f',
-    '__stripe_sid': '7d1b0bc3-de4d-4edb-b773-df60378a1b534df328',
-}
+
+    cookies = {
+        '__stripe_mid': 'f47bdda4-03bd-4f7b-83ee-13f0540db213b99b49',
+        '__test': 'a3d25e1987dc33989d1b872038a8171f',
+        '__stripe_sid': '7d1b0bc3-de4d-4edb-b773-df60378a1b534df328',
+    }
     headers = {
         'Accept': '*/*',
         'Accept-Language': 'en-US,en;q=0.9,ar;q=0.8',
