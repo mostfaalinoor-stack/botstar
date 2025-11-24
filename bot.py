@@ -28,7 +28,7 @@ os.system("cls" if os.name == "nt" else "clear")
 redo = ' /gift'
 id = 5643656889
 stopuser = {}
-token = '8576907914:AAFCm3Yc7cPOdzvk9FGgx1vCsYj3V0GKEsk'
+token = '8404535914:AAFRo09HY4ZsiPfhvvt4ie74049A1wwmwkM'
 
 bot=telebot.TeleBot(token,parse_mode="HTML")
 admin=5643656889
